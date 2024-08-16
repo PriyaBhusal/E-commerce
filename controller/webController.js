@@ -30,17 +30,25 @@ const menPage =async (req, res) => {
     var result =await getAllMen()
     res.render("men", { title: "Men" ,data:result});
   }catch(err){
-    res.status(500).render("error",{title:"Error"})
+    res.status(500).render("error",{title:"Error"});
+    console.log(err)
+    
   }
 };
 
 const womenPage = async (req, res) => {
   try {
-    var result = await getAllWomen();
+    var kurtiResult = await getAllWomen('kurthi');
+    var topsResult = await getAllWomen('tops');
+    var dressesResult = await getAllWomen('dresses');
 
-    res.status(200).render("women", { title: "women", data: result });
+
+  
+
+    res.status(200).render("women",{data: {kurtiResult, topsResult, dressesResult}} );
   } catch (err) {
     res.status(500).render("error", { title: "Error" });
+
   }
 };
 
@@ -61,7 +69,6 @@ const kidsPage =async (req, res) => {
 const accessoriesPage = async (req, res) => {
   try{
     const ringResult = await getAllAccessories('rings');
-    
     const bagResult = await getAllAccessories('bags')
   const locketResult = await getAllAccessories('lockets')
 

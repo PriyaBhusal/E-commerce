@@ -11,6 +11,6 @@ const getAllWomen = async (collection) => {
 };
 
 module.exports = {
-  getAllWomen,
+  getAllWomen:getAllWomen,
 };
 ``
