@@ -1,0 +1,23 @@
+{{>header}}
+{{>navbar}}
+
+
+<div class="sign-up-form">
+    <h1></h1>
+    <form action="/register" method="post">
+        <input type="text" class="input-box" name="firstName" placeholder="First Name" required>
+        <input type="text" class="input-box" name="lastName" placeholder="Last Name" required>
+        <input type="email" class="input-box" name="email" placeholder="Email" required>
+        <input type="text" class="input-box" minlength="10" maxlength="10"  name="phone" placeholder="Phone" required>
+        <input type="password" class="input-box" minlength="5" maxlength="8" name="password" placeholder="Password" required>
+        <button type="submit" id="button" class="signup-btn">Sign Up</button>
+        <hr>
+        <p class="or">OR</p>
+        <button type="button" id="button" class="login-btn"><a href="" style="color:aliceblue">Login with Google</a></button>
+        <p>Do you have an account?<a href="/web/login">Sign in</a></p>
+    </form>
+</div>
+
+
+
+

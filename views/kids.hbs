@@ -1,0 +1,496 @@
+{{>header}}
+{{>navbar}}
+<div class="men">
+<p class="men1"><u>BROWSE ALL PRODUCT FOR KIDS</u> </p>
+</div>
+
+<div class="kids">
+    <h4>Trade-in-offer</h4>
+    <h2>Super value deals</h2>
+    <h1>On all products</h1>
+    <p>Save ur money on the sales</p>
+    <button>Shop Now</button>
+</div>
+
+   <section class="product">
+      <h2 class="product-category">Frock <span>Collection</span></h2>
+      {{!-- <button class="nxt-btn"><i class="fa-solid fa-arrow-left"></i></button> --}}
+      <button class="pre-btn"><i class="fa-solid fa-arrow-right"></i></button>
+      <button class="nxt-btn"><i class="fa-solid fa-arrow-right"></i></button>
+      <div class="product-container">
+         {{#each data}}
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">{{this.discountTag}}</span>
+               <img src={{this.imageUrl}} class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">{{this.brand}}</h2>
+               <p class="product-short-description">{{this.description}}</p>
+               <span class="price">{{this.discountedPrice}}</span>
+               <span class="actual-price">{{this.actualPrice}}</span>
+                <button onclick="addToFavorites('/assets/bg1.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/bg1.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+         {{/each}}
+
+         {{!-- <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/bg2.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+                <button onclick="addToFavorites('/assets/bg2.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/bg2.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/bg3.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+               <button onclick="addToFavorites('/assets/bg3.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/bg3.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/bg4.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+                <button onclick="addToFavorites('/assets/bg4.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/bg4.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/bg5.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+                <button onclick="addToFavorites('/assets/bg5.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/bg5.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/bg6.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+                <button onclick="addToFavorites('/assets/bg6.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/bg6.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/bg7.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+                <button onclick="addToFavorites('/assets/bg7.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/bg7.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/bg8.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+                <button onclick="addToFavorites('/assets/bg8.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/bg8.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/bg9.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+             <button onclick="addToFavorites('/assets/bg9.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/bg9.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/bg10.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+                <button onclick="addToFavorites('/assets/bg10.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/bg10.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div> --}}
+      </div>
+   </section>
+
+
+
+   {{!-- glass section --}}
+     <section class="product">
+      <h2 class="product-category">Glass <span>Collection</span></h2>
+      {{!-- <button class="nxt-btn"><i class="fa-solid fa-arrow-left"></i></button> --}}
+      <button class="pre-btn"><i class="fa-solid fa-arrow-right"></i></button>
+      <button class="nxt-btn"><i class="fa-solid fa-arrow-right"></i></button>
+      <div class="product-container">
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/bb1.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+               <button onclick="addToFavorites('/assets/bb1.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/bb1.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/bb2.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+               <button onclick="addToFavorites('/assets/bb2.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/bb2.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/bb3.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+                <button onclick="addToFavorites('/assets/bb3.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/bb3.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/bb4.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+                <button onclick="addToFavorites('/assets/bb4.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/bb4.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/bb5.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+                <button onclick="addToFavorites('/assets/bb5.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/bb5.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/bb6.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+                <button onclick="addToFavorites('/assets/bb6.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/bb6.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/bb7.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+                <button onclick="addToFavorites('/assets/bb7.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/bb7.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/bb8.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+               <button onclick="addToFavorites('/assets/bb8.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/bb8.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/bb9.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+                <button onclick="addToFavorites('/assets/bb9.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/bb9.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/bb10.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+                <button onclick="addToFavorites('/assets/bb10.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/bb10.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   {{!-- watch section  --}}
+    <section class="product">
+      <h2 class="product-category">Watch <span>Collection</span></h2>
+      {{!-- <button class="nxt-btn"><i class="fa-solid fa-arrow-left"></i></button> --}}
+      <button class="pre-btn"><i class="fa-solid fa-arrow-right"></i></button>
+      <button class="nxt-btn"><i class="fa-solid fa-arrow-right"></i></button>
+      <div class="product-container">
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/wb1.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+                <button onclick="addToFavorites('/assets/wb1.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/wb1.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/wb2.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+                <button onclick="addToFavorites('/assets/wb2.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/wb2.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/wb3.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+                <button onclick="addToFavorites('/assets/wb3.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/wb3.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/wb4.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+                <button onclick="addToFavorites('/assets/wb4.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/wb4.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/wb5.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+                <button onclick="addToFavorites('/assets/wb5.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/wb5.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/wb6.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+                <button onclick="addToFavorites('/assets/wb6.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/wb6.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/wb7.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+               <button onclick="addToFavorites('/assets/wb7.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/wb7.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/wb8.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+               <button onclick="addToFavorites('/assets/wb8.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/wb8.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/wb9.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+               <button onclick="addToFavorites('/assets/wb9.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/wb9.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">sale</span>
+               <img src="/assets/w10.jpg" class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">brand</h2>
+               <p class="product-short-description">a short line about the product</p>
+               <span class="price">$20</span>
+               <span class="actual-price">$40</span>
+                <button onclick="addToFavorites('/assets/w10.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/w10 onclick="addToFavorites('/assets/mw4.jpg','Brand','this is the description','20')".jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+   {{>footer}}

@@ -1,0 +1,20 @@
+const express = require ('express')
+const router = express.Router()
+const{homePage,showCrousel,firstPage,menPage,womenPage,kidsPage,accessoriesPage,salePage,faqPage,signinPage,loginPage,cartIcon,favoriteIcon,payment}= require('../controller/webController')
+
+router.get("/home",homePage)
+.get("/crousel",showCrousel)
+.get("/first",firstPage)
+.get("/men",menPage)
+.get("/women",womenPage)
+.get("/kids",kidsPage)
+.get("/accessories",accessoriesPage)
+.get("/sale",salePage) 
+.get("/faqs",faqPage)
+.get("/signin",signinPage)
+.get("/login",loginPage)
+.get("/cart",cartIcon)
+.get("/favorites",favoriteIcon)
+.get("/payment",payment)
+
+module.exports=router;

@@ -1,0 +1,154 @@
+{{>header}}
+{{>navbar}}
+<div class="men">
+<p class="men1"><u>BROWSE ALL OF YOUR FAVORITE ACCESSORIES</u> </p>
+</div>
+
+<div class="acc">
+    <h4>Trade-in-offer</h4>
+    <h2>Super value deals</h2>
+    <h1>On all products</h1>
+    <p>Save ur money on the sales</p>
+    <button>Shop Now</button>
+</div>
+
+   <section class="product">
+      <h2 class="product-category">Rings <span>Collection</span></h2>
+      {{!-- <button class="nxt-btn"><i class="fa-solid fa-arrow-left"></i></button> --}}
+      <button class="pre-btn"><i class="fa-solid fa-arrow-right"></i></button>
+      <button class="nxt-btn"><i class="fa-solid fa-arrow-right"></i></button>
+      <div class="product-container">
+
+      {{#each data.ringResult}}
+            <div class="product-card">
+               <div class="product-image">
+                  <span class="discount-tag">{{this.discountTag}}</span>
+                  <img src={{this.imageUrl}} class="product-thumb" alt="">
+               </div>
+               <div class="product-info">
+                  <h2 class="product-brand">{{this.brand}}</h2>
+                  <p class="product-short-description">{{this.description}}</p>
+                  <span class="price">{{this.discountedPrice}}</span>
+                  <span class="actual-price">{{this.actualPrice}}</span>
+                  <button onclick="addToFavorites('{{this.imageUrl}}','{{this.brand}}','{{this.description}}','{{this.discountedPrice}}')">
+                     <a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a>
+                  </button>
+                  <button onclick="addToCart('{{this.imageUrl}}','{{this.brand}}','{{this.description}}','{{this.discountedPrice}}')">
+                     <a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a>
+                  </button>
+               </div>
+            </div>
+         {{/each}}
+
+      {{!-- {{#each data.ringResult}}
+         <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">{{this.discountTag}}</span>
+               <img src={{this.imageUrl}} class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">{{this.brand}}</h2>
+               <p class="product-short-description">{{this.description}}</p>
+               <span class="price">{{this.discountedPrice}}</span>
+               <span class="actual-price">{{this.actualPrice}}</span>
+                <button onclick="addToFavorites('/assets/r1.jpg','Brand','this is the description','20')">
+                <a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/r1.jpg','Brand','this is the description','20')">
+               <a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div>
+            {{/each}} --}}
+         </div>
+      </div>
+   </section>
+
+
+   
+   <section class="product">
+      <h2 class="product-category">Bags <span>Collection</span></h2>
+      {{!-- <button class="nxt-btn"><i class="fa-solid fa-arrow-left"></i></button> --}}
+      <button class="pre-btn"><i class="fa-solid fa-arrow-right"></i></button>
+      <button class="nxt-btn"><i class="fa-solid fa-arrow-right"></i></button>
+      <div class="product-container">
+            {{#each data.bagResult}}
+             <div class="product-card">
+               <div class="product-image">
+                  <span class="discount-tag">{{this.discountTag}}</span>
+                  <img src={{this.imageUrl}} class="product-thumb" alt="">
+               </div>
+               <div class="product-info">
+                  <h2 class="product-brand">{{this.brand}}</h2>
+                  <p class="product-short-description">{{this.description}}</p>
+                  <span class="price">{{this.discountedPrice}}</span>
+                  <span class="actual-price">{{this.actualPrice}}</span>
+                  <button onclick="addToFavorites('{{this.imageUrl}}','{{this.brand}}','{{this.description}}','{{this.discountedPrice}}')">
+                     <a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a>
+                  </button>
+                  <button onclick="addToCart('{{this.imageUrl}}','{{this.brand}}','{{this.description}}','{{this.discountedPrice}}')">
+                     <a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a>
+                  </button>
+               </div>
+            </div>
+         {{!-- <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">{{this.discountTag}}</span>
+               <img src={{this.imageUrl}} class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">{{this.brand}}</h2>
+               <p class="product-short-description">{{this.description}}</p>
+               <span class="price">{{this.discountedPrice}}</span>
+               <span class="actual-price">{{this.actualPrice}}</span>
+               <button onclick="addToFavorites('{{this.imageUrl}}','{{this.brand}}','{{this.description}}','{{this.discountedPrice}}')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('{{this.imageUrl}}','{{this.brand}}','{{this.description}}','{{this.discountedPrice}}')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div> --}}
+            {{/each}}
+         </div>
+      </div>
+   </section>
+
+   {{!-- watch section  --}}
+    <section class="product">
+      <h2 class="product-category">Locket <span>Collection</span></h2>
+      {{!-- <button class="nxt-btn"><i class="fa-solid fa-arrow-left"></i></button> --}}
+      <button class="pre-btn"><i class="fa-solid fa-arrow-right"></i></button>
+      <button class="nxt-btn"><i class="fa-solid fa-arrow-right"></i></button>
+      <div class="product-container">
+            {{#each data.locketResult}}
+            <div class="product-card">
+               <div class="product-image">
+                  <span class="discount-tag">{{this.discountTag}}</span>
+                  <img src={{this.imageUrl}} class="product-thumb" alt="">
+               </div>
+               <div class="product-info">
+                  <h2 class="product-brand">{{this.brand}}</h2>
+                  <p class="product-short-description">{{this.description}}</p>
+                  <span class="price">{{this.discountedPrice}}</span>
+                  <span class="actual-price">{{this.actualPrice}}</span>
+                  <button onclick="addToFavorites('{{this.imageUrl}}','{{this.brand}}','{{this.description}}','{{this.discountedPrice}}')">
+                     <a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a>
+                  </button>
+                  <button onclick="addToCart('{{this.imageUrl}}','{{this.brand}}','{{this.description}}','{{this.discountedPrice}}')">
+                     <a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a>
+                  </button>
+               </div>
+            </div>
+         {{!-- <div class="product-card">
+            <div class="product-image">
+               <span class="discount-tag">{{this.discountTag}}</span>
+               <img src={{this.imageUrl}} class="product-thumb" alt="">
+            </div>
+            <div class="product-info">
+               <h2 class="product-brand">{{this.brand}}</h2>
+               <p class="product-short-description"> {{this.description}}</p>
+               <span class="price">{{this.discountedPrice}}</span>
+               <span class="actual-price">{{this.actualPrice}}</span>
+               <button onclick="addToFavorites('/assets/l1.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-regular fa-heart" style="color: black;"></i></a></button>
+               <button onclick="addToCart('/assets/l1.jpg','Brand','this is the description','20')"><a href="#"><i class="fa-solid fa-cart-shopping" style="color: black;"></i></a></button>
+            </div> --}}
+            {{/each}}
+         </div>
+      </div>
+   </section>
+
+
+   {{>footer}}
