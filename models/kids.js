@@ -19,7 +19,8 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.STRING,
     discountedPrice: DataTypes.STRING,
     actualPrice: DataTypes.STRING,
-    imageUrl: DataTypes.STRING
+    imageUrl: DataTypes.STRING,
+    collection: DataTypes.ENUM('frock', 'boys', 'girls')
   }, {
     sequelize,
     modelName: 'Kids',

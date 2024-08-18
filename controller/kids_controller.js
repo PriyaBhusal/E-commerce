@@ -2,10 +2,11 @@ const {getAllKids} = require("../services/kids_services")
 // const model =require("../models")
 const showKids = async (req,res)=>{
     try{
-        console.log('aksjkll;d,as')
-        var result = await getAllKids();
-        console.log(result);
-        res.status(200).json({title:"Kids fetched successfully",data:result})
+        var frockResult = await getAllKids('frock');
+        var boysetResult = await getAllKids('boys');
+        var girlsetResult = await getAllKids('girls');
+        console.log(boysetResult)
+        res.status(200).json({title:"Kids fetched successfully",data:{frockResult,boysetResult,girlsetResult}})
     }
     catch(error)
     {

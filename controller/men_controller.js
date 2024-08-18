@@ -3,10 +3,12 @@ const model =require("../models")
 
 const showMen= async (req, res) => {
   try {
-    var result = await getAllMen();
-    console.log(result)
+    var shirtResult = await getAllMen('shirt');
+    var glassResult = await getAllMen('glass');
+    var watchResult = await getAllMen('watch');
+    
 
-    res.status(200).json({ title: "Men fetched succesfully!", data: result });
+    res.status(200).json({ title: "Men fetched succesfully!", data: {shirtResult,glassResult,watchResult} });
   } catch (err) {
     res.status(500).json({ title: "Error" });
   }

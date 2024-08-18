@@ -27,11 +27,14 @@ const firstPage = (req, res) => {
 //console.log(__dirname + '')
 const menPage =async (req, res) => {
   try{
-    var result =await getAllMen()
-    res.render("men", { title: "Men" ,data:result});
+    var shirtResult = await getAllMen('shirt');
+    var glassResult = await getAllMen('glass');
+    var watchResult = await getAllMen('watch');
+
+    res.status(200).render("men",{data: {shirtResult,glassResult,watchResult} });
   }catch(err){
-    res.status(500).render("error",{title:"Error"});
     console.log(err)
+    res.status(500).render("error",{title:"Error"});
     
   }
 };
@@ -54,13 +57,10 @@ const womenPage = async (req, res) => {
 
 const kidsPage =async (req, res) => {
   try {
-
-    //console.log('here-------------------------------------')
-    var result = await getAllKids();
-
-    // console.log(result);
-
-    res.status(200).render("kids", { title: "kids", data: result });
+    var frockResult = await getAllKids('frock');
+    var boysetResult = await getAllKids('boys');
+    var girlsetResult = await getAllKids('girls');
+    res.status(200).render("kids",{data:{frockResult,boysetResult,girlsetResult}})
   } catch (err) {
     res.status(500).render("error", { title: "Error" });
   }
@@ -75,8 +75,8 @@ const accessoriesPage = async (req, res) => {
     res.status(200).render("accessories",{title:"Accesories", data:{ringResult,bagResult,locketResult}})
     }
     catch (err){
-        console.log(err)
-        res.status(500).render("error",{title:"Error"})
+      res.status(500).render("error",{title:"Error"})
+      console.log(err)
     }
 };
 

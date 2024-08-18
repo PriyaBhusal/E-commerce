@@ -1,8 +1,10 @@
 const model= require('../models')
 
-const getAllMen = async () => {
+const getAllMen = async (collection) => {
    const result =await model.men.findAll({
-   
+   where:{
+        collection:collection
+   },
     raw:true
    }) ;
    
